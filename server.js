@@ -2,7 +2,7 @@ var express = require('express');
 var hbs=require('hbs')
 var fs=require('fs')
 
-
+const port=process.env.PORT||3000;
 var app = express()
 
 
@@ -54,4 +54,4 @@ app.get('/bad', (req, res) => {
         error: "cannot fulfill request"
     })
 })
-app.listen(3000)
+app.listen(port)
